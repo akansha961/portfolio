@@ -17,6 +17,14 @@
 <link rel="shortcut icon" href="fev.png" type="image/x-icon">
 </head>
 <body>
+
+    <!-- Image Viewer Container (Initially Hidden) -->
+<div id="imageViewer" class="image-viewer">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <img class="image-viewer-content" id="imageViewerContent" src="" alt="Image">
+</div>
+
+
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
     </div>
@@ -26,9 +34,11 @@
             <ul class="menu">
                 <li><a href="#home" class="menu-btn">Home</a></li>
                 <li><a href="#about" class="menu-btn">About</a></li>
+                <li><a href="#certificate" class="menu-btn">Certificate</a></li>
                 <li><a href="#projects" class="menu-btn">Project</a></li>
-                <li><a href="#social" class="menu-btn">Social</a></li>
+               
                 <li><a href="#skills" class="menu-btn">Skills</a></li>
+                <li><a href="#social" class="menu-btn">Social</a></li>
                 <li><a href="#contact" class="menu-btn">Contact</a></li>
             </ul>
             <div class="menu-btn">
@@ -58,7 +68,7 @@
                 </div>
                 <div class="column right">
                     <div class="text">I'm Akansha and I'm a <span class="typing-2"></span></div>
-                    <p>Currently I'm pursuing my B.Tech degree in CSE with specialization in Cyber Security from SRM IST Delhi-NCR Campus. I have recently cleared my Certified Ethical HAcker Certification(CEHv12).  I have serious passion for Front End Development and currently I am focusing on 
+                    <p>Currently I'm pursuing my B.Tech degree in CSE with specialization in Cyber Security from SRM IST Delhi-NCR Campus. I have recently cleared my Certified Ethical Hacker Certification(CEHv12).  I have serious passion for Front End Development and currently I am focusing on 
                         Backend Development.I have good commands on C++( 5 star on Hackerrank ) , Java , HTML , CSS , Javascript. I have also worked as the Core Member of ISTE SRM NCR Student's Chapter 
                         working in fields of Public Relations , Management & Creative. I'm a learner and can adapt new skills easily. 
                         I'm persistent, easy-going and a determined person.</p>
@@ -67,6 +77,27 @@
             </div>
         </div>
     </section>
+
+
+
+   <!-- certificate section start -->
+<section class="certificate" id="certificate">
+    <div class="max-width">
+        <h2 class="title">My Certificates</h2>
+        <div class="certificate-content">
+            <!-- Add certificate images here -->
+            <div class="certificate-item">
+                <img src="ceh.jpg" alt="Certificate 1" onclick="openImageViewer('ceh.jpg')">
+                <p>I have passed my Certified Ethical Hacker (CEHv12) with a score of 109/120.</p>
+            </div>
+            <div class="certificate-item">
+                <img src="nptel.jpg" alt="Certificate 2" onclick="openImageViewer('nptel.jpg')">
+                <p>I have passed my NPTEL certified certification of Cloud Computing & Distributed System with a score of 79% with a badge of Elite Silver.</p>
+            </div>
+            <!-- Add more certificates as needed -->
+        </div>
+    </div>
+</section>
 
 
 <!-- project section start -->

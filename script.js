@@ -70,3 +70,43 @@ $(document).ready(function(){
         }
     });
 });
+// JavaScript to open image viewer
+const imageViewer = document.getElementById('imageViewer');
+const closeBtn = document.getElementById('closeBtn');
+const imageViewerContent = document.getElementById('imageViewerContent');
+
+// Function to open the image viewer with a specific image source
+function openImageViewer(imageSrc) {
+   imageViewerContent.src = imageSrc;
+   imageViewer.style.display = 'block';
+
+   // Add event listeners to close the viewer when clicking outside or pressing Escape
+   document.addEventListener('click', closeImageViewerOnClickOutside);
+   document.addEventListener('keydown', closeImageViewerOnEscape);
+}
+
+// Function to close the image viewer
+function closeImageViewer() {
+   imageViewer.style.display = 'none';
+
+   // Remove event listeners
+   document.removeEventListener('click', closeImageViewerOnClickOutside);
+   document.removeEventListener('keydown', closeImageViewerOnEscape);
+}
+
+// Function to close the image viewer when clicking outside
+function closeImageViewerOnClickOutside(event) {
+   if (event.target === imageViewer) {
+       closeImageViewer();
+   }
+}
+
+// Function to close the image viewer when pressing Escape key
+function closeImageViewerOnEscape(event) {
+   if (event.key === 'Escape') {
+       closeImageViewer();
+   }
+}
+
+// Event listener to close the image viewer when the close button is clicked
+closeBtn.addEventListener('click', closeImageViewer);
